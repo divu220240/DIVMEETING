@@ -1,0 +1,15 @@
+{
+  "name": "divmeeting-workspace",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "install-all": "npm install --workspaces && npm run build --workspaces",
+    "dev": "npx concurrently \"npm --workspace=server run dev\" \"npm --workspace=client run dev\""
+  },
+  "dependencies": {
+    "mongodb": "^7.1.1"
+  }
+}
